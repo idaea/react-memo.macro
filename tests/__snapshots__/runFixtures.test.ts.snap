@@ -1,0 +1,709 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`react-memo.macro arrow-function-default-export-display-names: arrow-function-default-export-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+export default () => {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+export default React.memo(() => {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro arrow-function-default-export-no-display-names: arrow-function-default-export-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+export default () => {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+export default React.memo(() => {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro arrow-function-display-names: arrow-function-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const something = () => {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const something = React.memo(
+	(() => {
+		function something() {
+			return <p>Sample text</p>;
+		}
+
+		something.displayName = "something";
+		return something;
+	})()
+);
+
+
+`;
+
+exports[`react-memo.macro arrow-function-named-export-display-names: arrow-function-named-export-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+export const something = () => {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+export const something = React.memo(
+	(() => {
+		function something() {
+			return <p>Sample text</p>;
+		}
+
+		something.displayName = "something";
+		return something;
+	})()
+);
+
+
+`;
+
+exports[`react-memo.macro arrow-function-named-export-no-display-names: arrow-function-named-export-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+export const something = () => {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+export const something = React.memo(function something() {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro arrow-function-no-display-names: arrow-function-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const something = () => {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const something = React.memo(function something() {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro arrow-function-with-hoc-display-names: arrow-function-with-hoc-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const something = HoC(() => {
+	memo();
+	return <p>Sample text</p>;
+});
+
+// simulating something like react-redux
+function HoC(x) {
+	return x;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const something = HoC(
+	React.memo(() => {
+		return <p>Sample text</p>;
+	})
+); // simulating something like react-redux
+
+function HoC(x) {
+	return x;
+}
+
+
+`;
+
+exports[`react-memo.macro arrow-function-with-hoc-no-display-names: arrow-function-with-hoc-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const something = HoC(() => {
+	memo();
+	return <p>Sample text</p>;
+});
+
+// simulating something like react-redux
+function HoC(x) {
+	return x;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const something = HoC(
+	React.memo(() => {
+		return <p>Sample text</p>;
+	})
+); // simulating something like react-redux
+
+function HoC(x) {
+	return x;
+}
+
+
+`;
+
+exports[`react-memo.macro function-declaration-display-names: function-declaration-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+function TodoApp() {
+	memo();
+	return <p>Sample text</p>;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoApp = React.memo(
+	(() => {
+		function TodoApp() {
+			return <p>Sample text</p>;
+		}
+
+		TodoApp.displayName = "TodoApp";
+		return TodoApp;
+	})()
+);
+
+
+`;
+
+exports[`react-memo.macro function-declaration-named-export-display-names: function-declaration-named-export-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+export function TodoApp() {
+	memo();
+	return <p>Sample text</p>;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+export const TodoApp = React.memo(
+	(() => {
+		function TodoApp() {
+			return <p>Sample text</p>;
+		}
+
+		TodoApp.displayName = "TodoApp";
+		return TodoApp;
+	})()
+);
+
+
+`;
+
+exports[`react-memo.macro function-declaration-named-export-no-display-names: function-declaration-named-export-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+export function TodoApp() {
+	memo();
+	return <p>Sample text</p>;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+export const TodoApp = React.memo(function TodoApp() {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro function-declaration-no-display-names: function-declaration-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+function TodoApp() {
+	memo();
+	return <p>Sample text</p>;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoApp = React.memo(function TodoApp() {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro function-expression-anonymous-display-names: function-expression-anonymous-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const TodoList = function () {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoList = React.memo(
+	(() => {
+		function TodoList() {
+			return <p>Sample text</p>;
+		}
+
+		TodoList.displayName = "TodoList";
+		return TodoList;
+	})()
+);
+
+
+`;
+
+exports[`react-memo.macro function-expression-anonymous-no-display-names: function-expression-anonymous-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const TodoList = function () {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoList = React.memo(function TodoList() {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro function-expression-display-names: function-expression-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const TodoList = function TodoList() {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoList = React.memo(
+	(() => {
+		function TodoList() {
+			return <p>Sample text</p>;
+		}
+
+		TodoList.displayName = "TodoList";
+		return TodoList;
+	})()
+);
+
+
+`;
+
+exports[`react-memo.macro function-expression-inconsistent-names-display-names: function-expression-inconsistent-names-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const TodoListOuter = function TodoListInner() {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoListOuter = React.memo(
+	(() => {
+		function TodoListInner() {
+			return <p>Sample text</p>;
+		}
+
+		TodoListInner.displayName = "TodoListInner";
+		return TodoListInner;
+	})()
+);
+
+
+`;
+
+exports[`react-memo.macro function-expression-inconsistent-names-no-display-names: function-expression-inconsistent-names-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const TodoListOuter = function TodoListInner() {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoListOuter = React.memo(function TodoListInner() {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro function-expression-named-export-display-names: function-expression-named-export-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+export const TodoList = function TodoList() {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+export const TodoList = React.memo(
+	(() => {
+		function TodoList() {
+			return <p>Sample text</p>;
+		}
+
+		TodoList.displayName = "TodoList";
+		return TodoList;
+	})()
+);
+
+
+`;
+
+exports[`react-memo.macro function-expression-named-export-no-display-names: function-expression-named-export-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+export const TodoList = function TodoList() {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+export const TodoList = React.memo(function TodoList() {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro function-expression-no-display-names: function-expression-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const TodoList = function TodoList() {
+	memo();
+	return <p>Sample text</p>;
+};
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoList = React.memo(function TodoList() {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro function-expression-with-hoc-display-names: function-expression-with-hoc-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const something = HoC(function TodoList() {
+	memo();
+	return <p>Sample text</p>;
+});
+
+// simulating something like react-redux
+function HoC(x) {
+	return x;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const something = HoC(
+	React.memo(
+		(() => {
+			function TodoList() {
+				return <p>Sample text</p>;
+			}
+
+			TodoList.displayName = "TodoList";
+			return TodoList;
+		})()
+	)
+); // simulating something like react-redux
+
+function HoC(x) {
+	return x;
+}
+
+
+`;
+
+exports[`react-memo.macro function-expression-with-hoc-no-display-names: function-expression-with-hoc-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+const something = HoC(function TodoList() {
+	memo();
+	return <p>Sample text</p>;
+});
+
+// simulating something like react-redux
+function HoC(x) {
+	return x;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const something = HoC(
+	React.memo(function TodoList() {
+		return <p>Sample text</p>;
+	})
+); // simulating something like react-redux
+
+function HoC(x) {
+	return x;
+}
+
+
+`;
+
+exports[`react-memo.macro multiple-components-display-names: multiple-components-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+function TodoApp() {
+	memo();
+
+	return (
+		<div>
+			<TodoItem />
+			<TodoItem />
+		</div>
+	);
+}
+
+function someFiller() {
+	// should not be converted
+	return 123;
+}
+
+function TodoItem() {
+	memo();
+	return <p>Sample text</p>;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoApp = React.memo(
+	(() => {
+		function TodoApp() {
+			return (
+				<div>
+					<TodoItem />
+					<TodoItem />
+				</div>
+			);
+		}
+
+		TodoApp.displayName = "TodoApp";
+		return TodoApp;
+	})()
+);
+
+function someFiller() {
+	// should not be converted
+	return 123;
+}
+
+const TodoItem = React.memo(
+	(() => {
+		function TodoItem() {
+			return <p>Sample text</p>;
+		}
+
+		TodoItem.displayName = "TodoItem";
+		return TodoItem;
+	})()
+);
+
+
+`;
+
+exports[`react-memo.macro multiple-components-no-display-names: multiple-components-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+function TodoApp() {
+	memo();
+
+	return (
+		<div>
+			<TodoItem />
+			<TodoItem />
+		</div>
+	);
+}
+
+function someFiller() {
+	// should not be converted
+	return 123;
+}
+
+function TodoItem() {
+	memo();
+	return <p>Sample text</p>;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoApp = React.memo(function TodoApp() {
+	return (
+		<div>
+			<TodoItem />
+			<TodoItem />
+		</div>
+	);
+});
+
+function someFiller() {
+	// should not be converted
+	return 123;
+}
+
+const TodoItem = React.memo(function TodoItem() {
+	return <p>Sample text</p>;
+});
+
+
+`;
+
+exports[`react-memo.macro with-react-displayname-plugin-display-names: with-react-displayname-plugin-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+function TodoApp() {
+	memo();
+	return <p>Sample text</p>;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoApp = React.memo(
+	(() => {
+		function TodoApp() {
+			return <p>Sample text</p>;
+		}
+
+		TodoApp.displayName = "TodoApp";
+		return TodoApp;
+	})()
+);
+
+
+`;
+
+exports[`react-memo.macro with-react-displayname-plugin-no-display-names: with-react-displayname-plugin-no-display-names 1`] = `
+
+import React from "react";
+import { memo } from "../../helpers/react-memo.macro";
+
+function TodoApp() {
+	memo();
+	return <p>Sample text</p>;
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import React from "react";
+const TodoApp = React.memo(function TodoApp() {
+	return <p>Sample text</p>;
+});
+
+
+`;

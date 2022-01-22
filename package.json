@@ -1,0 +1,40 @@
+{
+	"name": "react-memo.macro",
+	"description": "A babel macro that adds React.memo to function components",
+	"version": "0.0.1",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"license": "MIT",
+	"keywords": [
+		"babel-plugin-macros"
+	],
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"test": "jest",
+		"build": "tsc && cp ./src/types.d.ts ./dist/index.d.ts",
+		"prepack": "tsc && cp ./src/types.d.ts ./dist/index.d.ts"
+	},
+	"devDependencies": {
+		"@babel/plugin-syntax-jsx": "^7.16.7",
+		"@babel/preset-env": "^7.16.8",
+		"@babel/preset-typescript": "^7.16.7",
+		"@tsconfig/node14": "^1.0.1",
+		"@types/babel-plugin-macros": "^2.8.5",
+		"@types/jest": "^27.4.0",
+		"babel-plugin-add-react-displayname": "^0.0.5",
+		"babel-plugin-macros": "^3.1.0",
+		"babel-plugin-tester": "^10.1.0",
+		"jest": "^27.4.7",
+		"typescript": "^4.6.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/idaea/react-memo.macro"
+	},
+	"bugs": {
+		"url": "https://github.com/idaea/react-memo.macro/issues"
+	},
+	"homepage": "https://github.com/idaea/react-memo.macro#readme"
+}
