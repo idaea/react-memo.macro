@@ -30,20 +30,14 @@ npm install react-memo.macro --save-dev
 
 ### Configuration
 
+Create a macro config file per the [official instructions](https://github.com/kentcdodds/babel-plugin-macros/blob/main/other/docs/user.md#config), and add:
+
 ```json5
-// babel.config.json
 {
-  "plugins": [
-    [
-      "macros",
-      {
-        "react-memo.macro": {
-          // if true, the macro will add display names to the React.memo-wrapped components
-          "addDisplayNames": true | false // default: false
-        }
-      }
-    ]
-  ]
+  "react-memo.macro": {
+  // if true, the macro will add display names to the React.memo-wrapped components
+    "addDisplayNames": true | false // default: false
+  }
 }
 ```
 
