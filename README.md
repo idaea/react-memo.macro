@@ -30,7 +30,7 @@ npm install react-memo.macro --save-dev
 
 ### Configuration
 
-Create a macro config file per the [official instructions](https://github.com/kentcdodds/babel-plugin-macros/blob/main/other/docs/user.md#config), and add:
+Create a macro config file per the [`babel-plugin-macros` instructions](https://github.com/kentcdodds/babel-plugin-macros/blob/main/other/docs/user.md#config), and add:
 
 ```json5
 {
