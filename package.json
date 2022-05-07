@@ -1,7 +1,7 @@
 {
 	"name": "react-memo.macro",
 	"description": "A babel macro that adds React.memo to function components",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"license": "MIT",
